@@ -25,11 +25,17 @@ import WhatTheySay from './WhatTheySay.vue'
 import Bio from './Bio.vue'
 import Contact from './Contact.vue'
 import Socials from './Socials.vue'
+import { preloadImages } from '@/shared/utils/preloadImages'
+import { onMounted } from 'vue'
 
 function scrollToContact() {
   document.getElementById('contact-section')?.scrollIntoView({
     behavior: 'smooth'
   })
 }
+
+onMounted(() => {
+  preloadImages(['project_card_arc.png', 'project_card_ccc.png', 'project_card_mff.png', 'project_card_nrts.png'])
+})
 
 </script>

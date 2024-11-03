@@ -1,7 +1,7 @@
 <template>
 <div class="flex justify-between bg-cover p-[14px] rounded-md cursor-pointer aspect-square md:aspect-[3/2] animate-in"
   :style="{
-    backgroundImage: `url(${backgroundImage})`,
+    backgroundImage: `url(/project_card_${props.project.key}.png)`,
   }">
   <div class="flex md:items-end grow max-w-[60%]">
     <ProjectCardTitle class="w-fit h-fit">
@@ -24,11 +24,6 @@
   transform: translateX(-10%) scale(1);
   transition: all 1s;
 
-  &:hover {
-    background-position: center;
-    transform: scale(2)
-  }
-
 }
 
 @keyframes slide-in {
@@ -48,9 +43,4 @@ import { useTagName } from '@/shared/lib/useTagName'
 const props = defineProps<{
   project: Project
 }>()
-
-const backgroundImage = new URL(
-  `../assets/project_card_${props.project.key}.png`,
-  import.meta.url
-).href
 </script>

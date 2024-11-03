@@ -26,7 +26,7 @@ import ProjectSm from './ProjectSm.vue';
 import ProjectLg from './ProjectLg.vue'
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import { onMounted, ref } from 'vue'
-
+import { preloadImages } from '@/shared/utils/preloadImages';
 const props = defineProps<{
   project: Project
 }>()
@@ -38,20 +38,11 @@ const breakpoints = useBreakpoints(breakpointsTailwind)
 const sm = breakpoints.smaller('md')
 
 async function loadImages() {
-  const images = (sm.value ? props.project.examples_mobile : props.project.examples).map(({ url }) => {
-    return new Promise((resolve, reject) => {
-      const img = new Image();
-      img.src = `/${url}`;
-      img.onload = resolve;
-      img.onerror = reject;
-    });
-  })
-  await Promise.all(images)
+  await preloadImages((sm.value ? props.project.examples_mobile : props.project.examples).map(({ url }) => url))
 }
 
 const loading = ref(false)
 onMounted(async () => {
-  console.log('mounted: ', props.project)
   loading.value = true;
 
   await loadImages();
