@@ -10,7 +10,10 @@
   </div>
   <div class="flex flex-col justify-between items-end">
     <Icon name="arrow" />
-    <Chip> {{ useTagName(project.tags[0]) }} </Chip>
+    <div class="relative w-full">
+      <Chip class="absolute translate-y-[-100%] right-0"> {{ useTagName(project.tags[0]) }} </Chip>
+    </div>
+
   </div>
 </div>
 </template>

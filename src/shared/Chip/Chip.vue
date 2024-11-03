@@ -1,6 +1,6 @@
 <template>
 <div class="rounded-md px-4" :class="classes">
-  <Typography tag="span" type="chip-example">
+  <Typography tag="span" type="chip-example" class="whitespace-nowrap">
     <slot />
   </Typography>
 </div>
