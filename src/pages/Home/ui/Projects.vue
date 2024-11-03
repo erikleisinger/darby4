@@ -11,9 +11,7 @@
     </div>
   </div>
 </MainSection>
-<keep-alive>
-  <ProjectView v-if="project" :project="project" class="z-20" @back="project = null" />
-</keep-alive>
+<ProjectView v-if="project" :project="project" class="z-20" @back="project = null" />
 </template>
 <script setup lang="ts">
 import type { Project } from '@/shared/config/projects'

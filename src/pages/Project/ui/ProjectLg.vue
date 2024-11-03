@@ -1,7 +1,8 @@
 <template>
-<div class="absolute inset-0  bg-white/10   project-lg">
+<div class="absolute inset-0  bg-white/10 ">
   <div
-    class="m-auto gap-[120px] max-w-[1440px] grid grid-cols-2 grid-rows-1 bg-slate padding__standard overflow-auto absolute inset-0  project-lg-inner ">
+    class="m-auto gap-[120px] max-w-[1440px] grid grid-cols-2 grid-rows-1 bg-slate padding__standard overflow-auto absolute inset-0  project-lg-inner "
+    v-if="!loading">
 
 
     <section class="flex flex-col gap-[20px] sticky top-0 ">
@@ -35,12 +36,7 @@
 </div>
 </template>
 <style lang="scss" scoped>
-.project-lg {
-  /* From https://css.glass */
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  animation: fade-in 0.3s forwards;
+.project__container {
 
   .project-lg-inner {
     animation: slide-up 0.2s forwards;
@@ -49,12 +45,7 @@
   }
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
 
-  }
-}
 
 @keyframes slide-up {
   from {
@@ -79,6 +70,7 @@ import { useTagName } from '@/shared/lib/useTagName'
 
 const props = defineProps<{
   project: Project
+  loading: boolean
 }>()
 
 const emit = defineEmits(['back'])
