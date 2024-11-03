@@ -27,10 +27,14 @@ import Contact from './Contact.vue'
 import Socials from './Socials.vue'
 import { preloadImages } from '@/shared/utils/preloadImages'
 import { onMounted } from 'vue'
+import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
+
+const breakpoints = useBreakpoints(breakpointsTailwind)
+const sm = breakpoints.smaller('md')
 
 function scrollToContact() {
   document.getElementById('contact-section')?.scrollIntoView({
-    behavior: 'smooth'
+    behavior: sm.value ? 'instant' : 'smooth'
   })
 }
 
