@@ -2,7 +2,7 @@
 <div class="absolute inset-0  bg-white/10 ">
   <div
     class="m-auto gap-[120px] max-w-[1440px] grid grid-cols-2 grid-rows-1 bg-slate padding__standard overflow-auto absolute inset-0  project-lg-inner "
-    v-if="!loading">
+    ref="el" v-if="!loading">
 
 
     <section class="flex flex-col gap-[20px] sticky top-0 ">
@@ -61,18 +61,23 @@
 }
 </style>
 <script lang="ts" setup>
+import { ref } from 'vue'
 import { Typography } from '@/shared/Typography'
 import { Chip } from '@/shared/Chip'
 import { Icon } from '@/shared/Icon'
 import { ProjectTools, ProjectExample } from '@/entities/Project'
 import type { Project } from '@/shared/config/projects'
 import { useTagName } from '@/shared/lib/useTagName'
-
+import { onClickOutside } from '@vueuse/core'
 const props = defineProps<{
   project: Project
   loading: boolean
 }>()
 
 const emit = defineEmits(['back'])
+const el = ref(null)
+onClickOutside(el, () => {
+  emit('back')
+})
 
 </script>
