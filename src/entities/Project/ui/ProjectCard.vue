@@ -24,10 +24,16 @@
   transform: translateX(-10%) scale(1);
   transition: all 1s;
 
-  &:hover {
-    background-position: center;
-  }
 
+
+}
+
+@media (min-width: 768px) {
+  .animate-in {
+    &:hover {
+      background-position: center;
+    }
+  }
 }
 
 @keyframes slide-in {
