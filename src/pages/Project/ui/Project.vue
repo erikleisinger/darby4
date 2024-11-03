@@ -1,7 +1,7 @@
 <template>
 <div class="fixed inset-0 lg:overflow-hidden">
-  <ProjectSm class="lg:hidden project__container" :project="project" @back="emit('back')" :loading="loading" />
-  <ProjectLg class="hidden lg:grid project__container" :project="project" @back="emit('back')" :loading="loading" />
+  <ProjectSm class="project__container" v-if="sm" :project="project" @back="emit('back')" :loading="loading" />
+  <ProjectLg class="project__container" v-else :project="project" @back="emit('back')" :loading="loading" />
 </div>
 </template>
 <style lang="scss">
