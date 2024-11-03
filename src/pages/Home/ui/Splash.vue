@@ -26,10 +26,62 @@
 
   <video v-if="sm" class="splash-video " autoplay muted playsinline loop preload="metadata"
     poster="/video_still_sm.png">
+    <source src="/splash_vid_sm.webm" type="video/mp4" />
     <source src="/splash_vid_sm.mp4" type="video/mp4" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+  <video v-else-if="md" class="splash-video " autoplay muted playsinline loop preload="metadata"
+    poster="/video_still_md.png">
+    <source src="/splash_vid_md.webm" type="video/mp4" />
+    <source src="/splash_vid_md.mp4" type="video/mp4" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+  <video v-else-if="xl" class="splash-video " autoplay muted playsinline loop preload="metadata"
+    poster="/video_still_lg.png">
+    <source src="/splash_vid_xl.webm" type="video/webm" />
+    <source src="/splash_vid_xl.mp4" type="video/mp4" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+  <video v-else-if="xl2" class="splash-video " autoplay muted playsinline loop preload="metadata"
+    poster="/video_still_lg.png">
+    <source src="/splash_vid_2xl.webm" type="video/webm" />
+    <source src="/splash_vid_2xl.mp4" type="video/mp4" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+  <video v-else-if="xl3" class="splash-video " autoplay muted playsinline loop preload="metadata"
+    poster="/video_still_lg.png">
+    <source src="/splash_vid_3xl.webm" type="video/webm" />
+    <source src="/splash_vid_3xl.mp4" type="video/mp4" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
   </video>
   <video v-else class="splash-video " autoplay muted playsinline loop preload="metadata" poster="/video_still_lg.png">
-    <source src="/splash_vid_lg.mp4" type="video/mp4" />
+    <source src="/splash_vid_4xl.webm" type="video/webm" />
+    <source src="/splash_vid_4xl.mp4" type="video/mp4" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
   </video>
 
 </div>
@@ -48,6 +100,14 @@ import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 
 const emit = defineEmits(['goDown'])
 
-const breakpoints = useBreakpoints(breakpointsTailwind)
+const breakpoints = useBreakpoints({
+  ...breakpointsTailwind,
+  '3xl': 1920,
+  '4xl': 3000,
+})
 const sm = breakpoints.smaller('md')
+const md = breakpoints.smaller('lg')
+const xl = breakpoints.smaller('2xl')
+const xl2 = breakpoints.smaller('3xl')
+const xl3 = breakpoints.smaller('4xl')
 </script>
