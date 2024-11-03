@@ -26,7 +26,7 @@
 
   <video v-if="sm" class="splash-video " autoplay muted playsinline loop preload="metadata"
     poster="/video_still_sm.png">
-    <source src="/splash_vid_sm.webm" type="video/mp4" />
+    <source src="/splash_vid_sm.webm" type="video/webm" />
     <source src="/splash_vid_sm.mp4" type="video/mp4" />
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a
@@ -36,7 +36,7 @@
   </video>
   <video v-else-if="md" class="splash-video " autoplay muted playsinline loop preload="metadata"
     poster="/video_still_md.png">
-    <source src="/splash_vid_md.webm" type="video/mp4" />
+    <source src="/splash_vid_md.webm" type="video/webm" />
     <source src="/splash_vid_md.mp4" type="video/mp4" />
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a
