@@ -1,7 +1,7 @@
 <template>
-<div style="backgroundImage: url('/whyme.png')" class="relative bg-cover">
+<div style="backgroundImage: url('/whyme.png')" class="relative bg-cover bg-[70%]">
   <div
-    class="absolute top-0 bottom-0 left-[24px] md:left-[60px] lg:left-[140px] my-auto h-fit w-fit right-[24px] md:max-w-[60%]  bg-white/50 rounded-md lg:p-[24px] md:p-[16px] p-[16px]">
+    class="absolute top-0 bottom-0 left-[16px] right-[16px] mx-auto md:mx-[unset] md:left-[60px] lg:left-[140px] my-auto h-fit w-fit md:right-[24px] md:max-w-[60%]  bg-white/50 rounded-md lg:p-[24px] md:p-[16px] p-[16px]">
     <Typography tag="h2" class="text-slate">
       Why choose me?
     </Typography>
