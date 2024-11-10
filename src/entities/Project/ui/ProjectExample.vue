@@ -1,9 +1,10 @@
-<template><img :src="example.url" class="md:max-w-[550px] md:max-h-[315px]" @click.stop="toggleZoom" />
+<template><img :src="example.url" class="md:max-w-[550px] md:max-h-[315px] cursor-pointer" @click.stop="toggleZoom" />
 <Teleport to="body">
-  <div class="fixed inset-0 z-30 example__view overflow-hidden POPOVER" v-if="viewFull" @click="viewFull = false">
-    <div class="absolute inset-4 md:inset-8 m-auto h-fit POPOVER " @click.stop>
-      <img :src="zoomUrl()" @click.stop class="POPOVER mx-auto" />
-    </div>
+  <div class="fixed inset-0 z-30 example__view overflow-hidden POPOVER flex items-center justify-center p-4 md:p-8"
+    v-if="viewFull" @click="viewFull = false">
+
+    <img :src="zoomUrl()" @click.stop class="POPOVER max-h-full w-fit m-auto " />
+
 
   </div>
 </Teleport>
