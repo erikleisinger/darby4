@@ -1,6 +1,6 @@
 <template>
 <div class="relative overflow-hidden">
-  <MainSection class="relative z-10 -mt-[1rem] lg:-mt-[2rem]">
+  <MainSection class="relative z-10 -mt-[1rem] lg:-mt-[2rem] 2xl:max-w-[100ch] m-auto">
 
     <template #title>Bio</template>
     <div class="rounded-md p-4 bg-black/40  ">
@@ -35,7 +35,8 @@
   filter: blur(8px);
   -webkit-filter: blur(8px);
   background-position: bottom;
-  background-image: url('/city.png')
+  background-image: url('/city.png');
+  background-size: cover;
 }
 </style>
 <script setup lang="ts">
