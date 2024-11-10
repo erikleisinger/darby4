@@ -13,7 +13,7 @@
       <h2 class="lg:text-lg-h4 md:text-md-h4 text-sm-h4 font-light" style="font-weight: 400">
         <div class="md:whitespace-nowrap">I’m a freelance Digital and User Experience Designer.</div>
 
-        <div class="md:whitespace-nowrap">I transform complex Ideas into simple, genuine experiences.</div>
+        <div class="md:whitespace-nowrap">I transform complex ideas into simple, genuine experiences.</div>
       </h2>
 
       <div>
