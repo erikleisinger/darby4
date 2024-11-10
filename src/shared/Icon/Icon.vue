@@ -1,5 +1,6 @@
 <template>
-<component :is="iconComponent" :stroke="stroke || strokeColor || ''" v-bind="$attrs"></component>
+<component :is="iconComponent" :stroke="stroke || strokeColor || ''" v-bind="$attrs"
+  class="max-h-[24px] max-w-[24px] md:max-h-[44px] md:max-w-[44px]" />
 </template>
 <script setup lang="ts">
 import { computed } from 'vue'
