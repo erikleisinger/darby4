@@ -1,7 +1,7 @@
 <template>
 <div class="flex justify-between bg-cover p-[14px] rounded-md cursor-pointer aspect-square md:aspect-[3/2] animate-in"
   :style="{
-    backgroundImage: `url(/project_card_${props.project.key}.png)`,
+    backgroundImage: `url(/project_card_${props.project.key}${sm ? '_mobile' : ''}.png)`,
   }">
   <div class="flex md:items-end grow max-w-[60%]">
     <ProjectCardTitle class="w-fit h-fit">
@@ -52,6 +52,11 @@ import ProjectCardTitle from './ProjectCardTitle.vue'
 import { Icon } from '@/shared/Icon'
 import { Chip } from '@/shared/Chip'
 import { useTagName } from '@/shared/lib/useTagName'
+import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
+
+const breakpoints = useBreakpoints(breakpointsTailwind)
+
+const sm = breakpoints.smaller('md')
 
 const props = defineProps<{
   project: Project

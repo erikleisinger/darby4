@@ -11,13 +11,13 @@
       </Typography>
 
       <h2 class="lg:text-lg-h4 md:text-md-h4 text-sm-h4 font-light" style="font-weight: 400">
-        <div class="md:whitespace-nowrap">I’m a freelance Software Designer.</div>
+        <div class="md:whitespace-nowrap">I’m a freelance Digital and User Experience Designer.</div>
 
-        <div class="md:whitespace-nowrap">I make customer experiences easy.</div>
+        <div class="md:whitespace-nowrap">I transform complex Ideas into simple, genuine experiences.</div>
       </h2>
 
       <div>
-        <Button icon="chevron" @click="emit('goDown')">Let's chat</Button>
+        <Button icon="chevron" @click="emit('goDown')" bordered>Let's chat</Button>
       </div>
     </div>
     <div class="hidden md:block" />

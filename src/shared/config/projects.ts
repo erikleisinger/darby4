@@ -20,57 +20,12 @@ export type ProjectTag = 'uiDesign' | 'contentDesign' | 'uxDesign' | 'branding' 
 export type ProjectExample = {
   type: 'image' | 'video';
   url: string;
+  preventZoom?: boolean
 }
 
 
 export const PROJECTS: Project[] = [
-  {
-    key: 'arc',
-    title_card: 'Arcteryx App Redesign',
-    title_main: 'Arcteryx Redesign',
-    description: 'This is a redesign I did for the ‘Discover’ section of Arc’Teryx’s eCommerce App. I noticed that every interaction on the Discovery page linked back to the home page of the store, not allowing users to explore products they were interested in on the page. I made a user flow that creates buy in to the Arc’Teryx lifestyle, then gently guides users to explore products they may be interested in.',
-    tools: ['figma', 'adobe', 'openAi'],
-    tags: ['uiDesign', 'contentDesign'],
-    examples: [
-      {
-        type: 'image',
-        url: 'arc/arc_1.png'
-      },
 
-      {
-        type: 'image',
-        url: 'arc/arc_2.png'
-      },
-
-      {
-        type: 'image',
-        url: 'arc/arc_3.png'
-      },
-
-      {
-        type: 'image',
-        url: 'arc/arc_4.png'
-      },
-      {
-        type: 'image',
-        url: 'arc/arc_5.gif'
-      }
-    ],
-    examples_mobile: [
-      {
-        type: 'image',
-        url: 'arc/arc_1_mobile.png',
-      },
-      {
-        type: 'image',
-        url: 'arc/arc_2_mobile.png',
-      },
-      {
-        type: 'image',
-        url: 'arc/arc_3_mobile.png',
-      },
-    ]
-  },
   {
     key: 'ccc',
     title_card: 'Counselling Centre Website',
@@ -235,8 +190,56 @@ The objective of this project was to increase NRTS’ visibility and online pres
       },
       {
         type: 'image',
-        url: 'nrts/nrts_5_mobile.gif'
+        url: 'nrts/nrts_5_mobile.gif',
+        preventZoom: true
       },
     ]
-  }
+  },
+  {
+    key: 'arc',
+    title_card: 'Arcteryx App Redesign',
+    title_main: 'Arcteryx Redesign',
+    description: 'This is a redesign I did for the ‘Discover’ section of Arc’Teryx’s eCommerce App. I noticed that every interaction on the Discovery page linked back to the home page of the store, not allowing users to explore products they were interested in on the page. I made a user flow that creates buy in to the Arc’Teryx lifestyle, then gently guides users to explore products they may be interested in.',
+    tools: ['figma', 'adobe', 'openAi'],
+    tags: ['uiDesign', 'contentDesign'],
+    examples: [
+      {
+        type: 'image',
+        url: 'arc/arc_1.png'
+      },
+
+      {
+        type: 'image',
+        url: 'arc/arc_2.png'
+      },
+
+      {
+        type: 'image',
+        url: 'arc/arc_3.png'
+      },
+
+      {
+        type: 'image',
+        url: 'arc/arc_4.png'
+      },
+      {
+        type: 'image',
+        url: 'arc/arc_5.gif'
+      }
+    ],
+    examples_mobile: [
+      {
+        type: 'image',
+        url: 'arc/arc_1_mobile.png',
+      },
+      {
+        type: 'image',
+        url: 'arc/arc_2_mobile.png',
+      },
+      {
+        type: 'image',
+        url: 'arc/arc_3_mobile.png',
+      },
+    ]
+  },
 ]

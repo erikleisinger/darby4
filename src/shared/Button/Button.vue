@@ -1,7 +1,8 @@
 <template><button class=" transition-all relative text-black  px-[16px]  py-[16px]  flex gap-2 items-center  rounded-md w-fit"
   :class="{
     'button bg-gold-500 pr-[26px]': state === 'default' || state === 'loading',
-    'bg-blue-300': state === 'success'
+    'bg-blue-300': state === 'success',
+    bordered,
   }">
   <Icon :name="icon" height="24px" v-if="icon && state === 'default'" />
   <Typography tag="div" type="button" class="mt-[-5px] grow" :class="{
@@ -20,6 +21,16 @@
       #7FD0E1 -5px 5px,
   }
 
+  &.bordered {
+    border: 4px solid black;
+    border-radius: unset !important;
+
+    &:hover {
+      box-shadow: white -6px 6px 0 0,
+        black -6px 6px 0 2px;
+    }
+  }
+
 }
 </style>
 <script setup lang="ts">
@@ -28,7 +39,8 @@ import { Typography } from '@/shared/Typography';
 
 const props = withDefaults(defineProps<{
   icon?: string,
-  state?: 'default' | 'loading' | 'success'
+  state?: 'default' | 'loading' | 'success',
+  bordered?: boolean
 }>(), {
   state: 'default'
 })
