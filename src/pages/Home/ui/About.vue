@@ -3,10 +3,13 @@
   <MainSectionHeader>
     What Excites Me
   </MainSectionHeader>
-  <Typography tag="p" class="lg:mb-[80px] mb-12">
-    I have always believed that work should be more than a paycheque. Things we create should be to better the world
-    and, ultimately, make us better people. Working with other people who are passionate, excited, creators excites me
-    more than anything. Does that sound like you? Give me a message below!
+  <Typography tag="p" class="lg:mb-[80px] mb-12 max-w-[80ch]">
+    I believe that design should be more than just work—it should make a difference.
+    I’m passionate about working with innovators who are driven to make a positive impact and build meaningful,
+    user-centered products.
+    Collaborating with like-minded creators who value authenticity and purpose is what truly inspires my work. If you're
+    looking for a UX designer who values purpose and impact as much as you do, let’s connect.
+    Reach out below to start your project!"
   </Typography>
   <MainSectionHeader>
     My Tools
