@@ -11,7 +11,7 @@
     </div>
   </div>
 </MainSection>
-<ProjectView v-if="project" :project="project" class="z-20" @back="project = null" />
+<ProjectView v-if="project" :project="project" class="z-20" @back="closeProject" />
 </template>
 <script setup lang="ts">
 import type { Project } from '@/shared/config/projects'
@@ -20,8 +20,8 @@ import { PROJECTS } from '@/shared/config/projects'
 import { MainSection } from '@/shared/MainSection'
 import { ProjectCard } from '@/entities/Project'
 import { Project as ProjectView } from '@/pages/Project'
-import { useRouter } from 'vue-router'
-import { ref, watch } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+import { ref, watch, computed } from 'vue'
 import { useElementVisibility } from '@vueuse/core'
 
 const router = useRouter()
@@ -36,10 +36,22 @@ watch(visible, (val) => {
   if (!val) return;
   showProjects.value = true;
 })
+const route = useRoute()
+const project = computed(() => PROJECTS.find(({ key }) => key === route.params?.project))
 
-const project = ref<Project | null>(null);
 function viewProject(projectToView: Project) {
-  project.value = projectToView
+  router.push({
+    name: 'home',
+    params: {
+      project: projectToView.key
+    }
+  })
+}
+
+function closeProject() {
+  router.push({
+    name: 'home'
+  })
 }
 
 </script>
