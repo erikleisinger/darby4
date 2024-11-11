@@ -29,14 +29,14 @@ const props = defineProps<{
 
 
 function zoomUrl() {
+  const { zoomUrl } = props.example;
+  if (zoomUrl) return zoomUrl
   const [title, suffix] = props.example.url.split('.')
   return title + '_zoom.' + suffix
 }
 const router = useRouter()
 const route = useRoute()
 function toggleZoom(bool: boolean) {
-  if (props.example.preventZoom) return;
-
   if (bool) {
     router.push({ name: 'home', params: { project: route.params.project }, hash: `#view-${zoomUrl()}` })
   } else {

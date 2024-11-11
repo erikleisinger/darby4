@@ -76,9 +76,9 @@ const props = defineProps<{
 
 const emit = defineEmits(['back'])
 const el = ref(null)
-onClickOutside(el, (e) => {
-  console.dir(e.target.classList)
-  if (Array.from(e.target.classList).includes('POPOVER')) return;
+onClickOutside(el, (e: PointerEvent) => {
+  const target = e.target as HTMLElement
+  if (!!target?.classList && Array.from(target.classList).includes('POPOVER')) return;
   emit('back')
 })
 

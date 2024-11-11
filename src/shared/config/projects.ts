@@ -20,7 +20,7 @@ export type ProjectTag = 'uiDesign' | 'contentDesign' | 'uxDesign' | 'branding' 
 export type ProjectExample = {
   type: 'image' | 'video';
   url: string;
-  preventZoom?: boolean
+  zoomUrl?: string
 }
 
 
@@ -165,7 +165,8 @@ The objective of this project was to increase NRTS’ visibility and online pres
       },
       {
         type: 'image',
-        url: 'nrts/nrts_5.gif'
+        url: 'nrts/nrts_5_zoom.webp',
+        zoomUrl: 'nrts/nrts_5_zoom.webp',
       },
     ],
     examples_mobile: [
@@ -186,12 +187,13 @@ The objective of this project was to increase NRTS’ visibility and online pres
 
       {
         type: 'image',
-        url: 'nrts/nrts_4_mobile.png'
+        url: 'nrts/nrts_4_mobile.png',
+
       },
       {
         type: 'image',
-        url: 'nrts/nrts_5_mobile.gif',
-        preventZoom: true
+        url: 'nrts/nrts_5_zoom.webp',
+        zoomUrl: 'nrts/nrts_5_zoom.webp',
       },
     ]
   },
