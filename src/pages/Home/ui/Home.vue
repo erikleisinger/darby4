@@ -1,19 +1,19 @@
 <template>
-<header class="relative h-full w-full">
-  <Splash @goDown="scrollToContact" />
-</header>
-<main>
-  <Projects />
-  <img src="/banner_1.png" class="w-full h-[400px] md:h-[unset] object-cover md:object-contain" />
-  <ServicesAndSectors />
-  <img src="/banner_2.png" class="w-full h-[400px] md:h-[unset] object-cover md:object-contain" />
-  <About />
-  <WhyChooseMe class="h-[400px] md:h-[300px] lg:h-[550px]" />
-  <WhatTheySay />
-  <Bio />
-  <Contact id="contact-section" class="m-auto max-w-[800px]" />
-  <Socials class="mb-[40px]" />
-</main>
+  <header class="relative h-full w-full">
+    <Splash @goDown="scrollToContact" />
+  </header>
+  <main>
+    <Projects />
+    <Image src="/banner_1.png" />
+    <ServicesAndSectors />
+    <Image src="/banner_2.png" />
+    <About />
+    <WhyChooseMe class="h-[400px] md:h-[300px] lg:h-[550px]" />
+    <WhatTheySay />
+    <Bio />
+    <Contact id="contact-section" class="m-auto max-w-[800px]" />
+    <Socials class="mb-[40px]" />
+  </main>
 </template>
 <script setup lang="ts">
 import Splash from './Splash.vue'
@@ -25,6 +25,7 @@ import WhatTheySay from './WhatTheySay.vue'
 import Bio from './Bio.vue'
 import Contact from './Contact.vue'
 import Socials from './Socials.vue'
+import Image from './Image.vue'
 import { preloadImages } from '@/shared/utils/preloadImages'
 import { onMounted } from 'vue'
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
@@ -34,12 +35,16 @@ const sm = breakpoints.smaller('md')
 
 function scrollToContact() {
   document.getElementById('contact-section')?.scrollIntoView({
-    behavior: sm.value ? 'instant' : 'smooth'
+    behavior: sm.value ? 'instant' : 'smooth',
   })
 }
 
 onMounted(() => {
-  preloadImages(['project_card_arc.png', 'project_card_ccc.png', 'project_card_mff.png', 'project_card_nrts.png'])
+  preloadImages([
+    'project_card_arc.png',
+    'project_card_ccc.png',
+    'project_card_mff.png',
+    'project_card_nrts.png',
+  ])
 })
-
 </script>
