@@ -44,5 +44,9 @@ const quotes = [
     text: 'Darby has been a truly valuable addition to our team, bringing a fresh and authentic approach to every project. He’s a thoughtful designer who really understands the power of meaningful design.',
     author: 'Federica, Founder of Fenia Communication',
   },
+  {
+    text: `Darby's professionalism exceeds anything I expected. He's a creative Swiss Army Knife that can specialise in any one of his tools when he has to. I love his creative eye and his flexibility to move with a project at pace through its ups and downs. He's my first call for any design project.`,
+    author: 'Richard, Atlas & Orion Consulting',
+  },
 ]
 </script>
