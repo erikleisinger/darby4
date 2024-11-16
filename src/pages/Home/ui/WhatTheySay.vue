@@ -48,5 +48,9 @@ const quotes = [
     text: `Darby's professionalism exceeds anything I expected. He's a creative Swiss Army Knife that can specialise in any one of his tools when he has to. I love his creative eye and his flexibility to move with a project at pace through its ups and downs. He's my first call for any design project.`,
     author: 'Richard, Atlas & Orion Consulting',
   },
+  {
+    text: `Darby has been fantastic to collaborate with. He thoughtfully incorporated our ideas and constraints while applying his expertise to make our website both beautiful and functional. Highly recommended!`,
+    author: 'Spencer Hammond, CCC',
+  },
 ]
 </script>
