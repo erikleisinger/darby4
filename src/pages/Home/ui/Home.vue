@@ -4,12 +4,13 @@
   </header>
   <main>
     <Projects />
+    <WhatTheySay />
     <Image src="/banner_1.png" />
     <ServicesAndSectors />
     <Image src="/banner_2.png" />
     <About />
     <WhyChooseMe class="h-[400px] md:h-[300px] lg:h-[550px]" />
-    <WhatTheySay />
+
     <Bio />
     <Contact id="contact-section" class="m-auto max-w-[800px]" />
     <Socials class="mb-[40px]" />
