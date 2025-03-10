@@ -4,20 +4,29 @@
 
   <header class="absolute inset-0 z-10 grid md:grid-cols-2 padding__standard">
     <div class="block md:hidden" />
-    <div class="flex flex-col justify-center gap-4 md:gap-12">
-      <Typography tag="h1"
+    <div class="flex flex-col justify-center gap-4 md:gap-12 ">
+      <div class="w-fit flex flex-col items-end">
+        <Typography tag="h1"
         class="lg:text-lg-h1 md:text-md-h1 text-sm-h1 font-obvs font-bold text-left md:text-right w-fit max-w-[5ch] leading-[1] uppercase">
-        Darby Yule
+        Darby 
       </Typography>
+      <Typography tag="h1"
+        class=" align-self-end text-right lg:text-lg-h1 md:text-md-h1 text-sm-h1 font-obvs font-bold text-left md:text-right w-fit max-w-[5ch] leading-[1] uppercase">
+        Yule
+      </Typography>
+      </div>
+  
+  
+  
 
       <h2 class="lg:text-lg-h4 md:text-md-h4 text-sm-h4 font-light" style="font-weight: 400">
-        <div class="md:whitespace-nowrap">I’m a freelance Digital and User Experience Designer.</div>
+        <div class="md:whitespace-nowrap">UX Designer | Systems Thinker | Problem Solver</div>
 
-        <div class="md:whitespace-nowrap">I transform complex ideas into simple, genuine experiences.</div>
+        <div class="md:whitespace-nowrap">Designed with purpose, guided by data, built for connection.</div>
       </h2>
 
-      <div>
-        <Button icon="chevron" @click="emit('goDown')" bordered>Let's chat</Button>
+      <div class="w-full lg:text-lg-h1 md:text-md-h1 text-sm-h1 button__grid" >
+        <Button icon="chevron" @click="emit('goDown')" bordered class="w-full">Let's talk</Button>
       </div>
     </div>
     <div class="hidden md:block" />
@@ -92,9 +101,13 @@
   width: 100%;
   object-fit: cover;
 }
+
+.button__grid {
+ width: 5ch;
+}
 </style>
 <script setup lang="ts">
-import { Typography } from '@/shared/Typography'
+import { Typography, getTypographyClass } from '@/shared/Typography'
 import { Button } from '@/shared/Button';
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 

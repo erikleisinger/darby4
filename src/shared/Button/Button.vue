@@ -1,7 +1,7 @@
 <template>
   <div class="relative button__wrap" :class="{ bordered }">
     <button
-      class="opacity-0 transition-all relative text-black px-[16px] py-[16px] flex gap-2 items-center rounded-md w-fit"
+      class="opacity-0 transition-all relative text-black px-[16px] py-[16px] flex justify-center gap-2 items-center rounded-md w-full"
       :class="{
         'button bg-gold-500 pr-[26px]':
           state === 'default' || state === 'loading',
@@ -22,7 +22,7 @@
       </Typography>
     </button>
     <button
-      class="absolute inset-0 z-10 transition-all text-black px-[16px] py-[16px] flex gap-2 items-center rounded-md w-fit"
+      class="absolute inset-0 z-10 transition-all text-black px-[16px] py-[16px] flex justify-center gap-2 items-center rounded-md "
       style="font-weight: 500"
       :class="{
         'button bg-gold-500 pr-[26px]':
@@ -35,7 +35,7 @@
       <Typography
         tag="div"
         type="button"
-        class="mt-[-5px] grow"
+        class="mt-[-5px] "
         :class="{
           'text-center': state !== 'default',
         }"
@@ -48,7 +48,6 @@
 <style lang="scss" scoped>
 $shadow-offset: 10px;
 .button__wrap {
-  width: fit-content;
   &:before {
     content: '';
     position: absolute;
