@@ -3,9 +3,10 @@
     <Splash @goDown="scrollToContact" />
   </header>
   <main>
-    <Projects />
+    <Projects2 />
     <Image src="/banner_1.png" />
     <WhatTheySay />
+
     <Bio />
     <Contact id="contact-section" class="m-auto max-w-[800px]" />
     <Socials class="mb-[40px]" />
@@ -14,6 +15,7 @@
 <script setup lang="ts">
 import Splash from './Splash.vue'
 import Projects from './Projects.vue'
+import { Projects2 } from '@/entities/Project2'
 import ServicesAndSectors from './ServicesAndSectors.vue'
 import About from './About.vue'
 import WhyChooseMe from './WhyChooseMe.vue'

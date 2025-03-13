@@ -1,9 +1,6 @@
 <template>
   <div class="relative overflow-hidden">
-    <MainSection
-      class="relative z-10 -mt-[1rem] lg:-mt-[2rem] 2xl:max-w-[100ch] m-auto"
-    >
-      <template #title>Bio</template>
+    <MainSection class="relative z-10 text-[24px] max-w-[82ch] leading-[1.5em]">
       <div class="rounded-md p-4 bg-black/40">
         <span class="text-gold-500 font-bold"
           >For as long as he can remember, Darby Yule has been making
@@ -47,8 +44,9 @@
   filter: blur(8px);
   -webkit-filter: blur(8px);
   background-position: bottom;
-  background-image: url('/city.png');
+  background-image: url('/bio_bg.png');
   background-size: cover;
+  background-position: 0% 30%;
 }
 </style>
 <script setup lang="ts">
