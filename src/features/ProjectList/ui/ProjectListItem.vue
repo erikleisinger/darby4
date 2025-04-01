@@ -1,6 +1,6 @@
 <template>
-  <div :data-section="type">
-    <header class="mb-2">
+  <div :data-section="type" class="flex flex-col gap-[40px]">
+    <header class="-mb-6">
       <Typography tag="h3" v-if="$slots.header"
         ><slot name="header"
       /></Typography>

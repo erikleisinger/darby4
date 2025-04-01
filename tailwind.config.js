@@ -9,6 +9,9 @@ export default {
         200: '#BDB9B9',
         300: '#909090',
       },
+      green: {
+        500: '#95AF88',
+      },
       red: '#f43f5e',
       background: '#2E3641',
       slate: '#2E3641',
