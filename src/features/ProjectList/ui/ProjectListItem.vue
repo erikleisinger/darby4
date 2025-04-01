@@ -1,11 +1,16 @@
 <template>
-  <div class="min-h-[500px]" :data-section="type">
-    {{ type }}
+  <div :data-section="type">
+    <header class="mb-2">
+      <Typography tag="h3" v-if="$slots.header"
+        ><slot name="header"
+      /></Typography>
+    </header>
+    <slot />
   </div>
 </template>
 <script setup lang="ts">
 import { ProjectListNavType } from '../types'
-
+import Typography from '@/shared/Typography/Typography.vue'
 const props = defineProps<{
   type: ProjectListNavType
 }>()

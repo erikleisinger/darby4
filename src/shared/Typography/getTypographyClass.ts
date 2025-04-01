@@ -21,7 +21,7 @@ export function getTypographyClass({
     {
       h1: '',
       h2: 'uppercase text-[36px]  lg:text-[48px] lg:leading-[78px] font-bold font-obvs',
-      h3: 'lg:text-lg-h3 md:text-md-h3 text-sm-h3 font-bold font-obvs uppercase italic',
+      h3: 'uppercase font-bold text-[24px]',
       h4: '',
       h5: '',
       h6: '',

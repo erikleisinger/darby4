@@ -30,6 +30,7 @@ import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import ProjectTool from './ProjectTool.vue'
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const lgAndUp = breakpoints.greaterOrEqual('lg')
+const mdAndUp = breakpoints.greaterOrEqual('md')
 
 const props = defineProps<{
   tools: Tool[]
