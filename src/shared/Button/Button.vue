@@ -32,7 +32,7 @@
       }"
     >
       <Icon :name="icon" height="24px" v-if="icon && state === 'default'" />
-      <Typography
+      <Typography 
         tag="div"
         type="button"
         class="mt-[-5px] "
