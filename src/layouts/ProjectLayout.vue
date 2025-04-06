@@ -3,7 +3,7 @@
     <nav class="px-4 py-4">
       <button
         class="hover:bg-white/10 transition-all rounded-md text-[24px ] uppercase flex items-center pr-2 py-1"
-        @click="router.back()"
+        @click="router.push({ path: '/' })"
       >
         <Icon name="backArrow" color="white" class="h-[32px]" />
         Back
@@ -14,8 +14,11 @@
         <template #header-text>
           <slot name="header-text"></slot>
         </template>
-        <template #right>
+        <template #tools>
           <slot name="tools" />
+        </template>
+        <template #duties>
+          <slot name="duties" />
         </template>
       </ProjectHeaderLg>
 
@@ -23,25 +26,36 @@
         <template #header-text>
           <slot name="header-text"></slot>
         </template>
-        <template #header-overlay>
+        <template #tools>
           <slot name="tools" />
+        </template>
+        <template #duties>
+          <slot name="duties" />
         </template>
       </ProjectHeaderSm>
       <ProjectHeaderMd v-else :imgUrl="headerImgUrl">
         <template #header-text>
           <slot name="header-text"></slot>
         </template>
-        <template #header-overlay>
+        <template #tools>
           <slot name="tools" />
+        </template>
+        <template #duties>
+          <slot name="duties" />
         </template>
       </ProjectHeaderMd>
       <main>
         <ProjectList>
           <slot name="main" />
+          <div class="flex justify-center mb-8 -mt-8">
+            <ChatButton class="w-[333px] max-w-[80vw]" />
+          </div>
         </ProjectList>
       </main>
     </div>
     <slot />
+
+    <ProjectBottomNav />
   </div>
 </template>
 <style lang="scss">
@@ -64,6 +78,8 @@ import ProjectHeaderLg from './ProjectHeaderLg.vue'
 import ProjectHeaderSm from './ProjectHeaderSm.vue'
 import ProjectHeaderMd from './ProjectHeaderMd.vue'
 import { ProjectList } from '@/features/ProjectList'
+import { ProjectBottomNav } from '@/features/ProjectBottomNav'
+import ChatButton from '@/shared/ui/ChatButton.vue'
 
 const props = defineProps<{
   headerImgUrl: string

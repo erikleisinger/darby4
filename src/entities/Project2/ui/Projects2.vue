@@ -42,6 +42,9 @@ const route = useRoute()
 
 enum ProjectNameEnum {
   Van = 'van',
+  CCC = 'ccc',
+  Forest = 'forest',
+  Trail = 'trail',
 }
 function viewProject(project: ProjectNameEnum) {
   router.push({
@@ -57,6 +60,9 @@ const projectComponent = computed(() => {
   if (!project) return
   return {
     [ProjectNameEnum.Van]: Van,
+    [ProjectNameEnum.CCC]: Van,
+    [ProjectNameEnum.Forest]: Van,
+    [ProjectNameEnum.Trail]: Van,
   }[project]
 })
 </script>

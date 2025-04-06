@@ -1,26 +1,26 @@
 <template>
-  <ProjectTool
-    v-for="tool in tools"
-    :key="tool"
-    :tool="tool"
-    :color="lgAndUp ? 'blue' : 'white'"
+  <ProjectDuty
+    v-for="duty in duties"
+    :key="duty"
+    :duty="duty"
+    :color="lgAndUp ? 'green' : 'white'"
     :class="
       lgAndUp
-        ? 'border-blue-300 w-[80px] p-[16px] text-blue-300'
-        : 'border-white w-[44px] p-[8px] text-white'
+        ? 'border-green-500 w-[80px] text-green-500 '
+        : 'border-white w-[44px] text-white '
     "
   />
 </template>
 <script setup lang="ts">
 import Typography from '@/shared/Typography/Typography.vue'
-import { Tool } from '../lib'
+import { ProjectDuty as ProjectDutyEnum } from '../lib/'
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
-import ProjectTool from './ProjectTool.vue'
+import ProjectDuty from './ProjectDuty.vue'
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const lgAndUp = breakpoints.greaterOrEqual('lg')
 const mdAndUp = breakpoints.greaterOrEqual('md')
 
 const props = defineProps<{
-  tools: Tool[]
+  duties: ProjectDutyEnum[]
 }>()
 </script>

@@ -26,6 +26,8 @@ import Mail from './Mail.vue'
 import LinkedIn from './LinkedIn.vue'
 import Instagram from './Instagram.vue'
 import Dribbble from './Dribbble.vue'
+import LeftArrow from './LeftArrow.vue'
+import RightArrow from './RightArrow.vue'
 const props = withDefaults(
   defineProps<{
     name: string
@@ -57,6 +59,8 @@ const iconComponent = computed(
       instagram: Instagram,
       linkedIn: LinkedIn,
       dribbble: Dribbble,
+      leftArrow: LeftArrow,
+      rightArrow: RightArrow,
 
       zoom: Zoom,
     })[props.name],

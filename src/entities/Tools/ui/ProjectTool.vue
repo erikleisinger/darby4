@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border-[1px] aspect-square flex flex-col items-center backdrop-blur-sm"
+    class="border-[1px] aspect-square flex flex-col items-center justify-center backdrop-blur-sm w-[48px] md:w-[80px]"
     :style="{
       backgroundColor: 'rgba(46, 54, 65, 0.40)',
     }"
@@ -10,7 +10,7 @@
       :color="color"
       :stroke="stroke"
       :name="tool"
-      :class="lgAndUp ? 'h-[24px]' : 'h-[12px]'"
+      :class="mdAndUp ? 'h-[24px]' : 'h-[12px]'"
     />
     <div class="text-center text-white/70 mt-1" v-if="!iconOnly">
       <Typography
@@ -34,7 +34,7 @@ import Typography from '@/shared/Typography/Typography.vue'
 
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 const breakpoints = useBreakpoints(breakpointsTailwind)
-const lgAndUp = breakpoints.greaterOrEqual('lg')
+const mdAndUp = breakpoints.greaterOrEqual('md')
 const props = withDefaults(
   defineProps<{
     color: 'white' | 'blue'

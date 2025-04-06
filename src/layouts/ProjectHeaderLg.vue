@@ -13,12 +13,24 @@
         }"
       />
       <div class="">
-        <slot name="right" />
+        <Typography tag="h5" type="body" class="text-blue-300 mb-2"
+          >Tools:</Typography
+        >
+        <div class="grid grid-cols-[repeat(2,80px)] gap-4">
+          <slot name="tools"></slot>
+        </div>
+        <Typography tag="h5" type="body" class="text-green-500 mb-2 mt-8"
+          >Duties:</Typography
+        >
+        <div class="flex flex-col gap-4">
+          <slot name="duties"></slot>
+        </div>
       </div>
     </div>
   </header>
 </template>
 <script lang="ts" setup>
+import Typography from '@/shared/Typography/Typography.vue'
 const props = defineProps<{
   imgUrl: string
 }>()

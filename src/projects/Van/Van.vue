@@ -11,6 +11,15 @@
         :tools="[Tool.Figma, Tool.Adobe, Tool.OpenAI, Tool.Discord]"
       />
     </template>
+    <template #duties>
+      <ProjectDuties
+        :duties="[
+          ProjectDuty.UIDesign,
+          ProjectDuty.UXDesign,
+          ProjectDuty.GenerativeAI,
+        ]"
+      />
+    </template>
     <template #main>
       <ProjectListItem :type="ProjectListNavType.Overview">
         <Typography tag="p">
@@ -103,6 +112,8 @@ import List from '@/shared/ui/List.vue'
 
 import { Tools, Tool } from '@/entities/Tools'
 import VanResult from './VanResult.vue'
+import { ProjectDuties } from '@/entities/Duties'
+import { ProjectDuty } from '@/entities/Duties/lib'
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const smAndDown = breakpoints.smaller('md')
