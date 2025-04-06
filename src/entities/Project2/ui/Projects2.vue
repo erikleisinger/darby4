@@ -33,14 +33,14 @@
     </div>
     <Teleport to="#app" v-if="projectComponent">
       <div
-        class="fixed inset-0 bg-background z-10 transition-all text-white"
+        class="fixed inset-0 z-10 transition-all text-white"
         :class="
           projectComponent
             ? 'opacity-1 translate-x-[0] scale-[1] pointer-events-auto'
             : 'opacity-0 translate-x-[-10%] scale-[0.9] pointer-events-none'
         "
       >
-        <component :is="projectComponent" />
+        <Loader> <component :is="projectComponent" /></Loader>
       </div>
     </Teleport>
   </MainSection>
@@ -54,6 +54,8 @@ import { Van } from '@/projects/Van'
 import { useRouter, useRoute } from 'vue-router'
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import CCC from '@/projects/CCC/CCC.vue'
+import Loader from './Loader.vue'
+import Mff from '@/projects/mff/Mff.vue'
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const smAndDown = breakpoints.smallerOrEqual('sm')
 const router = useRouter()
@@ -80,7 +82,7 @@ const projectComponent = computed(() => {
   return {
     [ProjectNameEnum.Van]: Van,
     [ProjectNameEnum.CCC]: CCC,
-    [ProjectNameEnum.Forest]: Van,
+    [ProjectNameEnum.Forest]: Mff,
     [ProjectNameEnum.Trail]: Van,
   }[project]
 })

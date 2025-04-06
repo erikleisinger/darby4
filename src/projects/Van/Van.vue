@@ -6,10 +6,7 @@
       Centre
     </template>
     <template #tools>
-      <Tools
-        :class="lgAnd"
-        :tools="[Tool.Figma, Tool.Adobe, Tool.OpenAI, Tool.Discord]"
-      />
+      <Tools :tools="[Tool.Figma, Tool.Adobe, Tool.OpenAI, Tool.Discord]" />
     </template>
     <template #duties>
       <ProjectDuties

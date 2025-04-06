@@ -6,10 +6,7 @@
       Community Counselling Centre
     </template>
     <template #tools>
-      <Tools
-        :class="lgAnd"
-        :tools="[Tool.Figma, Tool.Adobe, Tool.OpenAI, Tool.Zoom]"
-      />
+      <Tools :tools="[Tool.Figma, Tool.Adobe, Tool.OpenAI, Tool.Zoom]" />
     </template>
     <template #duties>
       <ProjectDuties

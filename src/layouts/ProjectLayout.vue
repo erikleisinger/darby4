@@ -24,7 +24,7 @@
 
       <ProjectHeaderSm
         v-else-if="smAndDown"
-        :imgUrl="headerImgUrl"
+        :imgUrl="headerImgUrlResponsive"
         @back="router.push({ path: '/' })"
       >
         <template #header-text>
@@ -37,7 +37,7 @@
           <slot name="duties" />
         </template>
       </ProjectHeaderSm>
-      <ProjectHeaderMd v-else :imgUrl="headerImgUrl">
+      <ProjectHeaderMd v-else :imgUrl="headerImgUrlResponsive">
         <template #header-text>
           <slot name="header-text"></slot>
         </template>

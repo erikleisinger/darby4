@@ -29,8 +29,8 @@
   </div>
 </template>
 <script setup lang="ts">
-import { Typography } from '@/shared/Typography'
 import Arrow from '@/shared/Icon/Arrow.vue'
+
 interface Props {
   backgroundImage: string
 }
