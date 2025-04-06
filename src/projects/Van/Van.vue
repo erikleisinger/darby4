@@ -111,7 +111,6 @@ import Typography from '@/shared/Typography/Typography.vue'
 import List from '@/shared/ui/List.vue'
 
 import { Tools, Tool } from '@/entities/Tools'
-import VanResult from './VanResult.vue'
 import { ProjectDuties } from '@/entities/Duties'
 import { ProjectDuty } from '@/entities/Duties/lib'
 
