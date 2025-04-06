@@ -1,6 +1,8 @@
 <template>
   <div class="relative overflow-hidden">
-    <MainSection class="relative z-10 text-[24px] max-w-[82ch] leading-[1.5em]">
+    <MainSection
+      class="relative z-10 text-[12px] md:text-[24px] max-w-[82ch] leading-[1.5em]"
+    >
       <div class="rounded-md p-4 bg-black/40">
         <span class="text-gold-500 font-bold"
           >For as long as he can remember, Darby Yule has been making

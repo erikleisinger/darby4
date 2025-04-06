@@ -1,18 +1,34 @@
 <template>
-  <MainSection>
+  <MainSection
+    :style="smAndDown ? 'padding-left: 16px; padding-right: 16px' : ''"
+  >
     <template #title> Work </template>
-    <div class="grid gap-6 grid-cols-[repeat(auto-fill,533px)]">
-      <Project2 backgroundImage="van" @click="viewProject(ProjectNameEnum.Van)">
+    <div
+      class="grid gap-6 grid-cols-1 md:grid-cols-[repeat(auto-fill,533px)] w-full justify-center"
+    >
+      <Project2
+        backgroundImage="van/van_card.webp"
+        @click="viewProject(ProjectNameEnum.Van)"
+      >
         Building a digital hub for Vancouver AI
       </Project2>
-      <Project2 backgroundImage="van">
-        Building a digital hub for Vancouver AI
+      <Project2
+        backgroundImage="ccc/ccc_card.webp"
+        @click="viewProject(ProjectNameEnum.CCC)"
+      >
+        An Accessible Future for the CCC
       </Project2>
-      <Project2 backgroundImage="van">
-        Building a digital hub for Vancouver AI
+      <Project2
+        backgroundImage="mff/mff_card.webp"
+        @click="viewProject(ProjectNameEnum.Forest)"
+      >
+        Gamifying Finances for Young Adults
       </Project2>
-      <Project2 backgroundImage="van">
-        Building a digital hub for Vancouver AI
+      <Project2
+        backgroundImage="nrts/nrts_card.webp"
+        @click="viewProject(ProjectNameEnum.Trail)"
+      >
+        A Digital Debut for a growing business
       </Project2>
     </div>
     <Teleport to="#app" v-if="projectComponent">
@@ -36,7 +52,10 @@ import { MainSection } from '@/shared/MainSection'
 import Project2 from './Project2.vue'
 import { Van } from '@/projects/Van'
 import { useRouter, useRoute } from 'vue-router'
-
+import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
+import CCC from '@/projects/CCC/CCC.vue'
+const breakpoints = useBreakpoints(breakpointsTailwind)
+const smAndDown = breakpoints.smallerOrEqual('sm')
 const router = useRouter()
 const route = useRoute()
 
@@ -60,7 +79,7 @@ const projectComponent = computed(() => {
   if (!project) return
   return {
     [ProjectNameEnum.Van]: Van,
-    [ProjectNameEnum.CCC]: Van,
+    [ProjectNameEnum.CCC]: CCC,
     [ProjectNameEnum.Forest]: Van,
     [ProjectNameEnum.Trail]: Van,
   }[project]

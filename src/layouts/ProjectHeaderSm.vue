@@ -6,9 +6,19 @@
         backgroundImage: `url(${imgUrl})`,
         backgroundPositionY: 'center',
         backgroundSize: 'cover',
-        height: 'calc(100vh - 64px)',
+        height: '100dvh',
       }"
     >
+      <div class="absolute left-4 top-4">
+        <button>
+          <Icon
+            name="backArrow"
+            color="white"
+            class="text-[2rem]"
+            @click="$emit('back')"
+          />
+        </button>
+      </div>
       <div class="absolute bottom-4 left-4 w-full flex flex-col gap-4">
         <div>
           <Typography tag="h4" type="body" class="font-bold mb-2"
@@ -42,4 +52,5 @@ const props = defineProps<{
   imgUrl: string
 }>()
 import ProjectHeaderText from '@/shared/Project/ProjectHeaderText.vue'
+import Icon from '@/shared/Icon/Icon.vue'
 </script>

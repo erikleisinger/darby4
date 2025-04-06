@@ -7,11 +7,16 @@
       style="max-height: unset; max-width: unset; margin-top: -3px"
     />
     <div>
-      <span class="font-bold"><slot name="title" /> →</span>
+      <span class="font-bold"
+        ><slot name="title" /> <span v-if="!hideArrow">→</span></span
+      >
       <slot />
     </div>
   </div>
 </template>
 <script setup lang="ts">
+const props = defineProps<{
+  hideArrow?: boolean
+}>()
 import Icon from '../Icon/Icon.vue'
 </script>
