@@ -56,6 +56,7 @@ import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
 import CCC from '@/projects/CCC/CCC.vue'
 import Loader from './Loader.vue'
 import Mff from '@/projects/mff/Mff.vue'
+import Nrts from '@/projects/nrts/Nrts.vue'
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const smAndDown = breakpoints.smallerOrEqual('sm')
 const router = useRouter()
@@ -83,7 +84,7 @@ const projectComponent = computed(() => {
     [ProjectNameEnum.Van]: Van,
     [ProjectNameEnum.CCC]: CCC,
     [ProjectNameEnum.Forest]: Mff,
-    [ProjectNameEnum.Trail]: Van,
+    [ProjectNameEnum.Trail]: Nrts,
   }[project]
 })
 </script>
