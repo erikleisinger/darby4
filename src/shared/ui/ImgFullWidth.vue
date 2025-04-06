@@ -1,6 +1,5 @@
 <template>
   <div
-    class="md:my-[40px]"
     :style="{
       backgroundImage: `url(${src}_${suffix}.${extension})`,
       backgroundSize: 'cover',

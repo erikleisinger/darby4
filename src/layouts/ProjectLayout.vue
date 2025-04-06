@@ -51,7 +51,7 @@
       <main>
         <ProjectList>
           <slot name="main" />
-          <div class="flex justify-center mt-4 mb-8 md:-mt-8">
+          <div class="flex justify-center">
             <ChatButton class="w-[333px] max-w-[80vw]" />
           </div>
         </ProjectList>

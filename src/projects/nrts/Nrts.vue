@@ -61,11 +61,9 @@
         <NrtsImpact />
       </ProjectListItem>
       <ProjectListItem :type="ProjectListNavType.Result">
-        <div>
-          <ImgFullWidth src="/nrts/nrts_wireframe" extension="webp" />
-          <ImgFullWidth src="/nrts/nrts_walk_1" extension="gif" />
-          <ImgFullWidth src="/nrts/nrts_walk_2" extension="gif" />
-        </div>
+        <ImgFullWidth src="/nrts/nrts_wireframe" extension="webp" />
+        <ImgFullWidth src="/nrts/nrts_walk_1" extension="gif" />
+        <ImgFullWidth src="/nrts/nrts_walk_2" extension="gif" />
       </ProjectListItem>
     </template>
   </ProjectLayout>

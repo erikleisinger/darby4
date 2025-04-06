@@ -5,7 +5,7 @@
         {{ item }}
       </ProjectListNavItem>
     </div>
-    <div className="  md:mt-[80px] flex flex-col gap-[40px]"><slot /></div>
+    <div className="   flex flex-col gap-[40px]"><slot /></div>
   </div>
 </template>
 <script setup lang="ts">

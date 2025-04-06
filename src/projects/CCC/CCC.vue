@@ -62,11 +62,9 @@
       </ProjectListItem>
 
       <ProjectListItem :type="ProjectListNavType.Result">
-        <div>
-          <ImgFullWidth src="/ccc/ccc_wireframe" extension="webp" />
-          <ImgFullWidth src="/ccc/ccc_walk" extension="gif" />
-          <ImgFullWidth src="/ccc/ccc_walk_2" extension="gif" />
-        </div>
+        <ImgFullWidth src="/ccc/ccc_wireframe" extension="webp" />
+        <ImgFullWidth src="/ccc/ccc_walk" extension="gif" />
+        <ImgFullWidth src="/ccc/ccc_walk_2" extension="gif" />
       </ProjectListItem>
     </template>
   </ProjectLayout>

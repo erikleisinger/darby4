@@ -1,9 +1,7 @@
 <template>
-  <div :data-section="type" class="flex flex-col gap-[40px]">
-    <header class="-mb-2">
-      <Typography tag="h3" v-if="$slots.header"
-        ><slot name="header"
-      /></Typography>
+  <div :data-section="type" class="flex flex-col gap-[40px] mt-8">
+    <header class="-mb-2" v-if="$slots.header">
+      <Typography tag="h3"><slot name="header" /></Typography>
     </header>
     <slot />
   </div>
