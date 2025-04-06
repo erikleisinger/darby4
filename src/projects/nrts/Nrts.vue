@@ -62,9 +62,9 @@
       </ProjectListItem>
       <ProjectListItem :type="ProjectListNavType.Result">
         <div>
-          <ImgFullWidth src="/mff/mff_wireframe" extension="webp" />
-          <ImgFullWidth src="/mff/mff_walk_1" extension="gif" />
-          <ImgFullWidth src="/mff/mff_walk_2" extension="gif" />
+          <ImgFullWidth src="/nrts/nrts_wireframe" extension="webp" />
+          <ImgFullWidth src="/nrts/nrts_walk_1" extension="gif" />
+          <ImgFullWidth src="/nrts/nrts_walk_2" extension="gif" />
         </div>
       </ProjectListItem>
     </template>
