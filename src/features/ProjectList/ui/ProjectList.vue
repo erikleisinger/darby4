@@ -1,11 +1,11 @@
 <template>
-  <div :className="lgAndUp ? 'grid grid-cols-[250px,1fr] gap-[80px]' : ''">
-    <div class="mt-[40px] lg:mt-[20px]">
+  <div :class="lgAndUp ? 'grid grid-cols-[250px,1fr] gap-16' : ''">
+    <div class="mt-12">
       <ProjectListNavItem v-for="item in items" :key="item" :item="item">
         {{ item }}
       </ProjectListNavItem>
     </div>
-    <div className="   flex flex-col gap-[40px]"><slot /></div>
+    <div class="flex flex-col gap-8 mt-8"><slot /></div>
   </div>
 </template>
 <script setup lang="ts">

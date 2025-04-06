@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <div class="justify-end text-right px-4">
+    <div class="justify-end text-right mt-16 px-4">
       <ProjectHeaderText>
         <slot name="header-text" />
       </ProjectHeaderText>

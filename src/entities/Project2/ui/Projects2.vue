@@ -3,34 +3,25 @@
     :style="smAndDown ? 'padding-left: 16px; padding-right: 16px' : ''"
   >
     <template #title> Work </template>
-    <div
-      class="grid gap-6 grid-cols-1 md:grid-cols-[repeat(auto-fill,533px)] w-full justify-center"
-    >
-      <Project2
-        backgroundImage="van/van_card.webp"
-        @click="viewProject(ProjectNameEnum.Van)"
+    <div ref="el">
+      <div
+        class="grid gap-6 grid-cols-1 md:grid-cols-[repeat(auto-fill,533px)] w-full justify-center"
       >
-        Building a digital hub for Vancouver AI
-      </Project2>
-      <Project2
-        backgroundImage="ccc/ccc_card.webp"
-        @click="viewProject(ProjectNameEnum.CCC)"
-      >
-        An Accessible Future for the CCC
-      </Project2>
-      <Project2
-        backgroundImage="mff/mff_card.webp"
-        @click="viewProject(ProjectNameEnum.Forest)"
-      >
-        Gamifying Finances for Young Adults
-      </Project2>
-      <Project2
-        backgroundImage="nrts/nrts_card.webp"
-        @click="viewProject(ProjectNameEnum.Trail)"
-      >
-        A Digital Debut for a growing business
-      </Project2>
+        <Project2
+          v-for="(project, index) in projects"
+          :key="project.key"
+          :backgroundImage="`${project.key}/${project.key}_card.webp`"
+          @click="viewProject(project.key)"
+          class="animate-in"
+          :style="{
+            'animation-delay': index * 100 + 'ms',
+          }"
+        >
+          {{ project.name }}
+        </Project2>
+      </div>
     </div>
+    '
     <Teleport to="#app" v-if="projectComponent">
       <div
         class="fixed inset-0 z-10 transition-all text-white"
@@ -45,9 +36,34 @@
     </Teleport>
   </MainSection>
 </template>
+<style lang="scss">
+.animate-in {
+  transition: all;
+  animation-name: slide-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateX(-10%) scale(1);
+  transition: all 1s;
+}
+
+@media (min-width: 768px) {
+  .animate-in {
+    &:hover {
+      background-position: center;
+    }
+  }
+}
+
+@keyframes slide-in {
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+</style>
 <script setup lang="ts">
-import { Teleport } from 'vue'
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { MainSection } from '@/shared/MainSection'
 import Project2 from './Project2.vue'
 import { Van } from '@/projects/Van'
@@ -57,6 +73,7 @@ import CCC from '@/projects/CCC/CCC.vue'
 import Loader from './Loader.vue'
 import Mff from '@/projects/mff/Mff.vue'
 import Nrts from '@/projects/nrts/Nrts.vue'
+import { useElementVisibility } from '@vueuse/core'
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const smAndDown = breakpoints.smallerOrEqual('sm')
 const router = useRouter()
@@ -65,9 +82,41 @@ const route = useRoute()
 enum ProjectNameEnum {
   Van = 'van',
   CCC = 'ccc',
-  Forest = 'forest',
-  Trail = 'trail',
+  Forest = 'mff',
+  Trail = 'nrts',
 }
+
+const projects = [
+  {
+    name: 'Building a digital hub for Vancouver AI',
+    key: ProjectNameEnum.Van,
+  },
+  {
+    name: 'An Accessible Future for the CCC',
+    key: ProjectNameEnum.CCC,
+  },
+  {
+    name: 'Gamifying Finances for Young Adults',
+    key: ProjectNameEnum.Forest,
+  },
+  {
+    name: 'A Digital Debut for a growing business',
+    key: ProjectNameEnum.Trail,
+  },
+]
+
+const el = ref(null)
+
+const visible = useElementVisibility(el)
+
+const showProjects = ref(false)
+
+watch(visible, val => {
+  console.log('visible: ', val)
+  if (!val) return
+  showProjects.value = true
+})
+
 function viewProject(project: ProjectNameEnum) {
   router.push({
     name: 'home',

@@ -1,5 +1,5 @@
 <template>
-  <div :data-section="type" class="flex flex-col gap-[40px] mt-8">
+  <div :data-section="type" class="flex flex-col gap-8 mt-8">
     <header class="-mb-2" v-if="$slots.header">
       <Typography tag="h3"><slot name="header" /></Typography>
     </header>

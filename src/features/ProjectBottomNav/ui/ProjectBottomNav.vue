@@ -2,7 +2,7 @@
   <div class="flex justify-between p-8 md:p-8 md:px-16">
     <button @click="goPrev" class="flex gap-4 items-center">
       <Icon name="leftArrow" color="white" />
-      <Typography type="body" tag="p" class="underline">Back</Typography>
+      <Typography type="body" tag="p" class="underline">Previous</Typography>
     </button>
     <button @click="goNext" class="flex gap-4 items-center">
       <Typography type="body" tag="p" class="underline">Next</Typography>
@@ -12,8 +12,7 @@
 </template>
 <script setup lang="ts">
 import { PROJECT_ORDER } from '@/projects/project-order'
-import Arrow from '@/shared/Icon/Arrow.vue'
-import BackArrow from '@/shared/Icon/BackArrow.vue'
+
 import Icon from '@/shared/Icon/Icon.vue'
 import Typography from '@/shared/Typography/Typography.vue'
 import { computed } from 'vue'

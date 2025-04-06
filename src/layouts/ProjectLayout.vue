@@ -9,7 +9,7 @@
         Back
       </button>
     </nav>
-    <div className="project__container bg-background">
+    <div className="px-0 md:px-6 lg:px-16 bg-background">
       <ProjectHeaderLg v-if="lgAndUp" :imgUrl="headerImgUrlResponsive">
         <template #header-text>
           <slot name="header-text"></slot>
@@ -48,11 +48,11 @@
           <slot name="duties" />
         </template>
       </ProjectHeaderMd>
-      <main>
+      <main class="px-4 md:px-0">
         <ProjectList>
           <slot name="main" />
           <div class="flex justify-center">
-            <ChatButton class="w-[333px] max-w-[80vw]" />
+            <ChatButton class="w-[min(333px,80vw)]" />
           </div>
         </ProjectList>
       </main>
@@ -62,24 +62,7 @@
     <ProjectBottomNav />
   </div>
 </template>
-<style lang="scss">
-.project__container {
-  @media (min-width: 1024px) {
-    padding: 0px 90px;
-  }
-  @media (max-width: 1024px) {
-    main {
-      padding: 0px 40px;
-    }
-  }
 
-  @media (max-width: 768px) {
-    main {
-      padding: 0px 20px;
-    }
-  }
-}
-</style>
 <script setup lang="ts">
 import Icon from '@/shared/Icon/Icon.vue'
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'

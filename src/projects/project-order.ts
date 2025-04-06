@@ -1,1 +1,1 @@
-export const PROJECT_ORDER = ['van', 'ccc', 'forest', 'trail']
+export const PROJECT_ORDER = ['van', 'ccc', 'mff', 'nrts']

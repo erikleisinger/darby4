@@ -1,5 +1,5 @@
 <template>
-  <div class="grid lg:grid-cols-2 gap-[40px]">
+  <div class="grid lg:grid-cols-2 gap-8">
     <ProcessCard :number="1" color="green">
       <template #title> Engaging Visuals</template>
 
