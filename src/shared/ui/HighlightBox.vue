@@ -8,7 +8,7 @@
     />
     <div>
       <span class="font-bold"
-        ><slot name="title" /> <span v-if="!hideArrow">→</span></span
+        ><slot name="title" /> <span v-if="!hideArrow">→ </span></span
       >
       <slot />
     </div>
