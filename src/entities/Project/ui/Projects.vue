@@ -20,7 +20,7 @@
         </Project>
       </div>
     </div>
-    '
+
     <Teleport to="#app" v-if="projectComponent">
       <div
         class="fixed inset-0 z-10 transition-all text-white"
