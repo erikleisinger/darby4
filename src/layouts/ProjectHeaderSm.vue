@@ -19,7 +19,7 @@
           />
         </button>
       </div>
-      <div class="absolute bottom-4 left-4 w-full flex flex-col gap-4">
+      <div class="absolute bottom-4 left-4 right-4 flex flex-col gap-4">
         <div>
           <Typography tag="h4" type="body" class="font-bold mb-2"
             >Tools:</Typography
