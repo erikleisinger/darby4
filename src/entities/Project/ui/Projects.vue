@@ -12,7 +12,6 @@
           :key="project.key"
           :backgroundImage="`${project.key}/${project.key}_card.webp`"
           @click="viewProject(project.key)"
-          class="animate-in"
           :style="{
             'animation-delay': index * 100 + 'ms',
           }"
@@ -36,32 +35,7 @@
     </Teleport>
   </MainSection>
 </template>
-<style lang="scss">
-.animate-in {
-  transition: all;
-  animation-name: slide-in;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-  transform: translateX(-10%) scale(1);
-  transition: all 1s;
-}
 
-@media (min-width: 768px) {
-  .animate-in {
-    &:hover {
-      background-position: center;
-    }
-  }
-}
-
-@keyframes slide-in {
-  to {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-  }
-}
-</style>
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { MainSection } from '@/shared/MainSection'

@@ -37,10 +37,10 @@ function scrollToContact() {
 
 onMounted(() => {
   preloadImages([
-    'van_card.webp',
-    'ccc_card.webp',
-    'mff_card.webp',
-    'nrts_card.webp',
+    'van/van_card.webp',
+    'ccc/ccc_card.webp',
+    'mff/mff_card.webp',
+    'nrts/nrts_card.webp',
   ])
 })
 </script>
