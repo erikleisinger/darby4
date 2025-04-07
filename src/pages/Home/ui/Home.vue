@@ -3,7 +3,7 @@
     <Splash @goDown="scrollToContact" />
   </header>
   <main>
-    <Projects2 />
+    <Projects />
     <Image src="/banner_1.png" />
     <WhatTheySay />
 
@@ -14,11 +14,9 @@
 </template>
 <script setup lang="ts">
 import Splash from './Splash.vue'
-import Projects from './Projects.vue'
-import { Projects2 } from '@/entities/Project2'
-import ServicesAndSectors from './ServicesAndSectors.vue'
-import About from './About.vue'
-import WhyChooseMe from './WhyChooseMe.vue'
+
+import { Projects } from '@/entities/Project'
+
 import WhatTheySay from './WhatTheySay.vue'
 import Bio from './Bio.vue'
 import Contact from './Contact.vue'
@@ -39,10 +37,10 @@ function scrollToContact() {
 
 onMounted(() => {
   preloadImages([
-    'project_card_arc.png',
-    'project_card_ccc.png',
-    'project_card_mff.png',
-    'project_card_nrts.png',
+    'van_card.webp',
+    'ccc_card.webp',
+    'mff_card.webp',
+    'nrts_card.webp',
   ])
 })
 </script>

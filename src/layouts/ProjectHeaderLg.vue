@@ -34,5 +34,5 @@ import Typography from '@/shared/Typography/Typography.vue'
 const props = defineProps<{
   imgUrl: string
 }>()
-import ProjectHeaderText from '@/shared/Project/ProjectHeaderText.vue'
+import ProjectHeaderText from './ProjectHeaderText.vue'
 </script>

@@ -22,9 +22,12 @@ const route = useRoute()
 
 const currentRoute = computed(() => route.params.project)
 
-const currentRouteIndex = computed(() =>
-  PROJECT_ORDER.indexOf(currentRoute.value),
-)
+const currentRouteIndex = computed(() => {
+  if (Array.isArray(currentRoute.value)) {
+    return PROJECT_ORDER.indexOf(currentRoute.value[0])
+  }
+  return PROJECT_ORDER.indexOf(currentRoute.value)
+})
 
 const router = useRouter()
 function goPrev() {

@@ -40,6 +40,6 @@
 const props = defineProps<{
   imgUrl: string
 }>()
-import ProjectHeaderText from '@/shared/Project/ProjectHeaderText.vue'
+import ProjectHeaderText from './ProjectHeaderText.vue'
 import Typography from '@/shared/Typography/Typography.vue'
 </script>
