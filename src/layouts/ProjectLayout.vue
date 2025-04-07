@@ -52,7 +52,7 @@
         <ProjectList>
           <slot name="main" />
           <div class="flex justify-center">
-            <ChatButton class="w-[min(333px,80vw)]" />
+            <ChatButton class="w-[min(333px,80vw)]" @click="onChat" />
           </div>
         </ProjectList>
       </main>
@@ -74,6 +74,11 @@ import { ProjectList } from '@/features/ProjectList'
 import { ProjectBottomNav } from '@/features/ProjectBottomNav'
 import ChatButton from '@/shared/ui/ChatButton.vue'
 import { computed } from 'vue'
+
+function onChat() {
+  window.dispatchEvent(new Event('chat'))
+}
+
 const props = defineProps<{
   headerImgUrl: string
 }>()

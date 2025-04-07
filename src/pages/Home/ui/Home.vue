@@ -23,8 +23,9 @@ import Contact from './Contact.vue'
 import Socials from './Socials.vue'
 import Image from './Image.vue'
 import { preloadImages } from '@/shared/utils/preloadImages'
-import { onMounted } from 'vue'
+import { onBeforeUnmount, onMounted } from 'vue'
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
+import { useRouter } from 'vue-router'
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const sm = breakpoints.smaller('md')
@@ -35,6 +36,12 @@ function scrollToContact() {
   })
 }
 
+const router = useRouter()
+function onChatEmit() {
+  router.push('/')
+  scrollToContact()
+}
+
 onMounted(() => {
   preloadImages([
     'van/van_card.webp',
@@ -42,5 +49,11 @@ onMounted(() => {
     'mff/mff_card.webp',
     'nrts/nrts_card.webp',
   ])
+
+  window.addEventListener('chat', onChatEmit)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('chat', onChatEmit)
 })
 </script>
