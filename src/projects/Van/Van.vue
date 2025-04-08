@@ -53,13 +53,13 @@
           wanted a space to network, learn, and stay involved long after events
           ended. Using AI-driven tools like Adobe Firefly, Sorta, Lovable and
           Netlify also influenced the process. Unlike working with a developer,
-          I had to: >
+          I had to:
           <br />
           <List
             :listItems="[
               {
                 title: ' Pre-define responsive wireframes',
-                text: 'AI tools struggle with multiple breakpoints, so I designed forresponsivity first.',
+                text: 'AI tools struggle with multiple breakpoints, so I designed for responsivity first.',
               },
               {
                 title: `Be hyper-clear in structure`,
