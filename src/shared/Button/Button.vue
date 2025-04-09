@@ -22,7 +22,7 @@
       </Typography>
     </button>
     <button
-      class="absolute inset-0 z-10 transition-all text-black px-[16px] py-[16px] flex justify-center gap-2 items-center rounded-md "
+      class="absolute inset-0 z-10 transition-all text-black px-[16px] py-[16px] flex justify-center gap-2 items-center rounded-md"
       style="font-weight: 500"
       :class="{
         'button bg-gold-500 pr-[26px]':
@@ -32,10 +32,10 @@
       }"
     >
       <Icon :name="icon" height="24px" v-if="icon && state === 'default'" />
-      <Typography 
+      <Typography
         tag="div"
         type="button"
-        class="mt-[-5px] "
+        class="mt-[-5px]"
         :class="{
           'text-center': state !== 'default',
         }"
@@ -59,10 +59,8 @@ $shadow-offset: 10px;
     border-radius: 4px;
   }
 
-  &:not(.bordered) {
-    &:before {
-      background-color: #7fd0e1;
-    }
+  &:before {
+    background-color: #7fd0e1;
   }
 }
 .button {
@@ -91,6 +89,6 @@ const props = withDefaults(
   }>(),
   {
     state: 'default',
-  }
+  },
 )
 </script>

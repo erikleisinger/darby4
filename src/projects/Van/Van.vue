@@ -84,7 +84,11 @@
         <VanImpact />
       </ProjectListItem>
       <ProjectListItem :type="ProjectListNavType.Result">
-        <ImgFullWidth src="/van/van_wireframes" extension="webp" />
+        <ImgFullWidth
+          src="/van/van_wireframes"
+          extension="webp"
+          class="aspect-[5/7] object-fit"
+        />
         <ImgFullWidth src="/van/van_wk_1" extension="gif" />
         <ImgFullWidth src="/van/van_wk_2" extension="gif" />
         <ImgFullWidth src="/van/van_wk_3" extension="gif" />

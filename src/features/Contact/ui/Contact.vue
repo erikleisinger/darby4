@@ -36,6 +36,7 @@
         icon="mail"
         @click.submit
         :state="buttonState"
+        bordered
         class="min-w-[200px]"
       >
         {{ buttonText }}

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between p-8 md:p-8 md:px-16">
+  <div class="flex justify-between p-8 md:p-8 pb-4 md:pb-4 md:px-16">
     <button @click="goPrev" class="flex gap-4 items-center">
       <Icon name="leftArrow" color="white" />
       <Typography type="body" tag="p" class="underline">Previous</Typography>

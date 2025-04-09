@@ -6,7 +6,7 @@
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       width: '100%',
-      aspectRatio: '5/3',
+      aspectRatio: smAndDown && extension === 'gif' ? '5/7' : '5/3',
       backgroundColor: 'black',
     }"
     v-bind="$attrs"
