@@ -4,12 +4,8 @@
   </header>
   <main>
     <Projects />
-    <WhatTheySay />
     <Image src="/banner_1.png" />
-    <ServicesAndSectors />
-    <Image src="/banner_2.png" />
-    <About />
-    <WhyChooseMe class="h-[400px] md:h-[300px] lg:h-[550px]" />
+    <WhatTheySay />
 
     <Bio />
     <Contact id="contact-section" class="m-auto max-w-[800px]" />
@@ -18,18 +14,18 @@
 </template>
 <script setup lang="ts">
 import Splash from './Splash.vue'
-import Projects from './Projects.vue'
-import ServicesAndSectors from './ServicesAndSectors.vue'
-import About from './About.vue'
-import WhyChooseMe from './WhyChooseMe.vue'
+
+import { Projects } from '@/entities/Project'
+
 import WhatTheySay from './WhatTheySay.vue'
 import Bio from './Bio.vue'
 import Contact from './Contact.vue'
 import Socials from './Socials.vue'
 import Image from './Image.vue'
 import { preloadImages } from '@/shared/utils/preloadImages'
-import { onMounted } from 'vue'
+import { onBeforeUnmount, onMounted } from 'vue'
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
+import { useRouter } from 'vue-router'
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const sm = breakpoints.smaller('md')
@@ -40,12 +36,24 @@ function scrollToContact() {
   })
 }
 
+const router = useRouter()
+function onChatEmit() {
+  router.push('/')
+  scrollToContact()
+}
+
 onMounted(() => {
   preloadImages([
-    'project_card_arc.png',
-    'project_card_ccc.png',
-    'project_card_mff.png',
-    'project_card_nrts.png',
+    'van/van_card.webp',
+    'ccc/ccc_card.webp',
+    'mff/mff_card.webp',
+    'nrts/nrts_card.webp',
   ])
+
+  window.addEventListener('chat', onChatEmit)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('chat', onChatEmit)
 })
 </script>

@@ -1,31 +1,39 @@
 <template>
   <div class="relative overflow-hidden">
     <MainSection
-      class="relative z-10 -mt-[1rem] lg:-mt-[2rem] 2xl:max-w-[100ch] m-auto"
+      class="relative z-10 text-[12px] md:text-[24px] max-w-[82ch] leading-[1.5em]"
     >
-      <template #title>Bio</template>
       <div class="rounded-md p-4 bg-black/40">
-        I’m Darby Yule, a Digital and User Experience Designer based in Burnaby,
-        BC. I specialize in crafting user-centred designs that help small
-        businesses and tech entrepreneurs succeed in a competitive landscape. My
-        approach is grounded in authenticity and collaboration, ensuring that
-        every project reflects the unique voice of my clients.
-        <br />
-        <br />
-        With a diverse background in music, content creation, and
-        entrepreneurship, I provide high-quality, project-based design services
-        tailored to the needs of startups, NGOs, and SaaS companies. My
-        data-driven approach ensures that designs not only look great but also
-        meet your business goals.
-
-        <br />
+        <span class="text-gold-500 font-bold"
+          >For as long as he can remember, Darby Yule has been making
+          things</span
+        >—
         <br />
 
-        I believe that design should be simple yet impactful. By prioritizing
-        clarity and meaningful experiences, I help businesses connect with their
-        audience on a deeper level. If you’re ready to elevate your brand and
-        create exceptional digital experiences, let’s connect and explore how we
-        can bring your vision to life!
+        designing digital experiences, crafting compelling brand stories, and
+        writing music. As a UX strategist and digital designer, Darby has worked
+        with marketers, non-profits, and established brands to craft digital
+        experiences that aren’t just functional, but intuitive and meaningful.
+        <br />
+
+        Freelancing since day one, Darby understands what it takes to turn
+        creativity into strategy. He guides teams through the complexities of
+        user experience, accessibility, and AI-driven design, ensuring that
+        every interaction serves both user needs and business objectives. His
+        mission? Create products that work, feel great, and drive meaningful
+        engagement.
+
+        <br />
+
+        Beyond design, Darby has a long history of creative entrepreneurship,
+        having built a career across multiple industries, including music and
+        digital media. This adaptability allows him to blend analytical thinking
+        with storytelling, branding, and user psychology—resulting in design
+        solutions that don’t just work, but resonate. Today, Darby is deeply
+        invested in the evolving relationship between AI, design, and human
+        experience. He thrives in fast-moving, problem-solving environments,
+        collaborating with forward-thinking teams to push the boundaries of
+        what’s possible in UX.
       </div>
     </MainSection>
     <div class="absolute inset-0 bg" />
@@ -38,8 +46,9 @@
   filter: blur(8px);
   -webkit-filter: blur(8px);
   background-position: bottom;
-  background-image: url('/city.png');
+  background-image: url('/bio_bg.png');
   background-size: cover;
+  background-position: 0% 30%;
 }
 </style>
 <script setup lang="ts">
