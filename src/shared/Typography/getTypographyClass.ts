@@ -15,6 +15,7 @@ export function getTypographyClass({
       'form-title': 'text-[8px] md:text-[10px] lg:text-[12px]',
       button: 'text-btn font-obvs',
       s1: 'text-[32px] font-regular',
+      caption: 'text-[14px] text-white/80',
     }[type]
   }
   return (

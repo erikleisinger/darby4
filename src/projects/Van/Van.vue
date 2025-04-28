@@ -37,7 +37,11 @@
         <VanProblem></VanProblem>
       </ProjectListItem>
 
-      <ImgFullWidth src="/van/van_turning" extension="gif" />
+      <ImgFullWidth
+        src="/van/van_turning"
+        extension="gif"
+        description="Utilizing OpenAI to develop and Organize Information Architecture"
+      />
 
       <ProjectListItem :type="ProjectListNavType.Research">
         <template #header> Research & Strategy </template>
@@ -77,7 +81,11 @@
       <ProjectListItem :type="ProjectListNavType.Solution">
         <template #header> Solution </template>
         <VanSolution />
-        <ImgFullWidth src="/van/van_post" extension="gif" />
+        <ImgFullWidth
+          src="/van/van_post"
+          extension="gif"
+          description="Example of the Community Discussion Forum and Resources.This includes an ‘Upvote’ and ‘Likes’ System. "
+        />
       </ProjectListItem>
       <ProjectListItem :type="ProjectListNavType.Impact">
         <template #header> Implementation & Launch </template>
@@ -88,6 +96,7 @@
           src="/van/van_wireframes"
           extension="webp"
           class="aspect-[5/7] object-fit"
+          description="Pictures of the Desktop Wireframes for Vancouver AI Version 1. These are also designed with responsively in mind."
         />
         <ImgFullWidth src="/van/van_wk_1" extension="gif" />
         <ImgFullWidth src="/van/van_wk_2" extension="gif" />

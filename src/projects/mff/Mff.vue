@@ -39,7 +39,11 @@
         <MffProblem />
       </ProjectListItem>
 
-      <ImgFullWidth src="/mff/mff_scroll" extension="gif" />
+      <ImgFullWidth
+        src="/mff/mff_scroll"
+        extension="gif"
+        description="A walkthrough of the Survey that I used to test Reddit users’ financial needs and abilities This was the turning point for the pivot from children to adults."
+      />
 
       <ProjectListItem :type="ProjectListNavType.Research">
         <template #header> Research & Strategy </template>
@@ -55,14 +59,22 @@
         <MffSolution />
       </ProjectListItem>
 
-      <ImgFullWidth src="/mff/mff_game" extension="gif" />
+      <ImgFullWidth
+        src="/mff/mff_game"
+        extension="gif"
+        description="A walkthrough of the Store Page for the Gamified section of the app. "
+      />
 
       <ProjectListItem :type="ProjectListNavType.Impact">
         <template #header> Implementation & Launch </template>
         <MffImpact />
       </ProjectListItem>
       <ProjectListItem :type="ProjectListNavType.Result">
-        <ImgFullWidth src="/mff/mff_wireframe" extension="webp" />
+        <ImgFullWidth
+          src="/mff/mff_wireframe"
+          extension="webp"
+          description="The Mobile First Wireframes for the My Forest Friend App version 1"
+        />
         <ImgFullWidth src="/mff/mff_walk_1" extension="gif" />
         <ImgFullWidth src="/mff/mff_walk_2" extension="gif" />
       </ProjectListItem>

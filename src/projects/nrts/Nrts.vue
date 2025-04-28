@@ -36,7 +36,11 @@
         <NrtsProblem />
       </ProjectListItem>
 
-      <ImgFullWidth src="/nrts/nrts_comp" extension="gif" />
+      <ImgFullWidth
+        src="/nrts/nrts_comp"
+        extension="gif"
+        description="Example of Competitor’s sites while I did competitive research."
+      />
 
       <ProjectListItem :type="ProjectListNavType.Research">
         <template #header> Research & Strategy </template>
@@ -54,14 +58,22 @@
         <NrtsSolution />
       </ProjectListItem>
 
-      <ImgFullWidth src="/nrts/nrts_cards" extension="gif" />
+      <ImgFullWidth
+        src="/nrts/nrts_cards"
+        extension="gif"
+        description="Service cards that also sell a lifestyle. Showing peaceful images of families playing and a wonderful point-of-view picture of a hiking trail."
+      />
 
       <ProjectListItem :type="ProjectListNavType.Impact">
         <template #header> Implementation & Impact </template>
         <NrtsImpact />
       </ProjectListItem>
       <ProjectListItem :type="ProjectListNavType.Result">
-        <ImgFullWidth src="/nrts/nrts_wireframe" extension="webp" />
+        <ImgFullWidth
+          src="/nrts/nrts_wireframe"
+          extension="webp"
+          description="Final Responsive, Mobile First, Wireframes for the NRTS website."
+        />
         <ImgFullWidth src="/nrts/nrts_walk_1" extension="gif" />
         <ImgFullWidth src="/nrts/nrts_walk_2" extension="gif" />
       </ProjectListItem>

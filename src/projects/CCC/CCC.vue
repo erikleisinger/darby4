@@ -36,7 +36,11 @@
         <CCCProblem />
       </ProjectListItem>
 
-      <ImgFullWidth src="/ccc/ccc_card_sort" extension="webp" />
+      <ImgFullWidth
+        src="/ccc/ccc_card_sort"
+        extension="webp"
+        description="Picture from the initial Card Sort that I performed with the CCC Staff."
+      />
 
       <ProjectListItem :type="ProjectListNavType.Research">
         <template #header> Research & Strategy </template>
@@ -55,14 +59,22 @@
 
         <CCCSolution />
       </ProjectListItem>
-      <ImgFullWidth src="/ccc/ccc_service" extension="gif" />
+      <ImgFullWidth
+        src="/ccc/ccc_service"
+        extension="gif"
+        description="The final iteration of the service cards. These give a small, easily digestible amount of information about the CCC’s services and what they mean"
+      />
       <ProjectListItem :type="ProjectListNavType.Impact">
         <template #header> Implementation & Launch </template>
         <CCCImpact />
       </ProjectListItem>
 
       <ProjectListItem :type="ProjectListNavType.Result">
-        <ImgFullWidth src="/ccc/ccc_wireframe" extension="webp" />
+        <ImgFullWidth
+          src="/ccc/ccc_wireframe"
+          extension="webp"
+          description="The final responsive Wireframes for the CCC’s new Website"
+        />
         <ImgFullWidth src="/ccc/ccc_walk" extension="gif" />
         <ImgFullWidth src="/ccc/ccc_walk_2" extension="gif" />
       </ProjectListItem>
