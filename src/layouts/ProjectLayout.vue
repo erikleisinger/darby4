@@ -59,7 +59,7 @@
       <main class="px-4 md:px-0">
         <ProjectList>
           <slot name="main" />
-          <div class="flex justify-center sticky bottom-16 md:bottom-4">
+          <div class="flex justify-center sticky bottom-16 md:bottom-4 z-50">
             <ChatButton class="w-[min(333px,80vw)]" @click="onChat" />
           </div>
         </ProjectList>
